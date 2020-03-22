@@ -9,6 +9,10 @@ public:
   void showTime();
   void showMoon();  //作业：将当前公历转换为农历显示出来 
 };
+void showTime()
+{
+	if(month>)
+ } 
 int main() {
   DateTime dt, dt1;
   std::cout << &dt << std::endl;
