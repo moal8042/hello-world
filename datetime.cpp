@@ -9,6 +9,16 @@ public:
   void showTime();
   void showMoon();  //作业：将当前公历转换为农历显示出来 
 };
+class MoonTime{
+private:
+	int year_ ,month_ ,day_;
+	int hour_, minute_, second_;
+public:
+	MoonTime();
+	~MoonTime();
+	void showTime();
+  void showMoon();
+}; 
 int main() {
   DateTime dt, dt1;
   std::cout << &dt << std::endl;
@@ -21,6 +31,12 @@ DateTime::DateTime()
 {
   year = 2020; month = 3; day = 20;
   hour = 11; minute = 27; second = 55;
+  
+}
+MoonTime::MoonTime()
+{
+	year_ = 2020; month_ = 2; day_ = 37;
+  hour_ = 11; minute_ = 27; second_ = 55;
 }
 DateTime::~DateTime() 
 {
@@ -29,5 +45,10 @@ DateTime::~DateTime()
 void DateTime::showTime()
 {
   printf("当前时间：%d/%d/%d %d:%d:%d\n", year, month, day, hour, minute, second);
+  
+}
+void MoonTime::showMoon()
+{
+	printf("当前时间：%d/%d/%d/ %d:%d:%d\n",year_, month_,day_, hour_, minute_,second_);
 }
  
